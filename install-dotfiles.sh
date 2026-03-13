@@ -32,6 +32,7 @@ if [ $? -eq 0 ]; then
   "$HOME/.config/kitty" \
   "$HOME/.config/hypr" \
   "$HOME/.config/zellij"
+  "$HOME/.config/hyprmon"
 
   cd "$REPO_NAME"
   echo "Stowing dots"
@@ -40,6 +41,10 @@ if [ $? -eq 0 ]; then
   stow kitty
   stow hyprland
   stow zellij
+  # if desktop
+  stow hyprmon
+  # if laptop
+  stow hyprdynamicmonitors
 else
   echo "Failed to clone the repository."
   exit 1
