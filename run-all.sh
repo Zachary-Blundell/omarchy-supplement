@@ -53,17 +53,18 @@ echo "Installing $ROLE setup..."
 ./install-zellij.sh
 ./install-zsh.sh
 
+./install-hyprmon.sh
 
 
 # Role specific packages
-case "$ROLE" in
-  laptop) # if laptop
-    ./install-hyprdynamicmonitors.sh
-    ;;
-  desktop) # if desktop
-    ./install-hyprmon.sh
-    ;;
-esac
+# case "$ROLE" in
+#   laptop) # if laptop
+#     ./install-hyprdynamicmonitors.sh
+#     ;;
+#   desktop) # if desktop
+#     ./install-hyprmon.sh
+#     ;;
+# esac
 
 # Remove stuff
 ./remove-1password.sh
@@ -74,6 +75,6 @@ esac
 ./set-shell.sh
 
 # Nextcloud stuff
-./nextcloud-postinstall-setup.sh
+# ./nextcloud-postinstall-setup.sh
 
 echo "Done installing $ROLE setup."
